@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us | Janta Fitness Club</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: gainsboro;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+        header h1 {
+            margin: 0;
+        }
+        .contact-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            padding: 40px;
+        }
+        .contact-form {
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            width: 45%;
+            box-sizing: border-box;
+        }
+        .contact-form h2 {
+            color: #333;
+            font-size: 1.8em;
+            margin-bottom: 20px;
+        }
+        .contact-form label {
+            font-size: 1.1em;
+            color: #333;
+            margin-bottom: 8px;
+            display: block;
+        }
+        .contact-form input, .contact-form textarea {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        .contact-form textarea {
+            resize: vertical;
+            height: 150px;
+        }
+        .contact-form button {
+            background-color: #f56b2a;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            font-size: 1.2em;
+            cursor: pointer;
+        }
+        .contact-form button:hover {
+            background-color: #f89a56;
+        }
+        .contact-info {
+            width: 45%;
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            box-sizing: border-box;
+        }
+        .contact-info h2 {
+            color: #333;
+            font-size: 1.8em;
+            margin-bottom: 20px;
+        }
+        .contact-info p {
+            color: #666;
+            font-size: 1.1em;
+            margin-bottom: 15px;
+        }
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            margin-top: 40px;
+        }
+
+        /* Media Query for Small Devices */
+        @media screen and (max-width: 768px) {
+            .contact-form, .contact-info {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<style>
+
+ /*font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: white;
+            background-image: url('images/a1.jpg'), url('images/a3.jpg'), url('images/a2.jpeg');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            animation: scrollBackground 30s linear infinite;
+        }*/
+
+        header {
+            background-color: black;
+            color: white;
+            padding: 10px 0;
+            text-align: center;
+        }
+
+        nav {
+            display: flex;
+            justify-content: center;
+            background-color: #444;
+        }
+
+        nav a {
+            color: white;
+            padding: 14px 20px;
+            text-decoration: none;
+            text-align: center;
+        }
+
+        nav a:hover {
+            background-color: #ddd;
+            color: black;
+        }
+
+        section {
+            padding: 40px;
+            margin: 20px;
+            background-color:  darkgrey;
+            border-radius: 8px;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: black;
+            color: white;
+        }
+
+        .services, .contact-form, .events {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+        }
+
+        .service-item, .contact-form input, .contact-form textarea, .event-item {
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        .service-item, .event-item {
+            background-color: #f4f4f4;
+            text-align: center;
+            padding: 20px;
+        }
+
+        .contact-form input[type="submit"] {
+            background-color: #333;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+
+        .contact-form input[type="submit"]:hover {
+            background-color: #555;
+        }
+
+        /* Add styles for images */
+       /* .about-image, .service-image {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+        }*/
+
+        /* Scrolling images styles */
+      /*  .container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+        }
+*/
+        .scrolling-images {
+            display: flex;
+            overflow: hidden;
+            width: 80%;
+            border-radius: 8px;
+        }
+
+        .image {
+            width: 100%;
+            height: 300px;
+            background-size: cover;
+            background-position: center;
+            flex-shrink: 0;
+            transition: transform 0.5s ease-in-out;
+        }
+
+        .arrow {
+            background-color: rgba(0, 0, 0, 0.5);
+            color: white;
+            padding: 10px;
+            border: none;
+            cursor: pointer;
+            font-size: 24px;
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+
+        .arrow:hover {
+            background-color: rgba(0, 0, 0, 0.8);
+        }
+
+        .left {
+            left: 0;
+        }
+
+        .right {
+            right: 0;
+        }
+
+       /* @keyframes scrollBackground {
+            0% {
+                background-position: 0% 0%, 100% 100%, 0% 0%;
+            }
+            50% {
+                background-position: 100% 100%, 0% 0%, 100% 100%;
+            }
+            100% {
+                background-position: 0% 0%, 100% 100%, 0% 0%;
+            }
+        }
+    */
+</style>
+<body>
+
+    <header>
+
+        <nav>
+
+<a href="index.html"> janta fitness club </a>
+    <a href="home.html">Home</a>
+    <a href="description.html">About</a>
+    <a href="services.html">Services</a>
+    <a href="contact.html">Contact Us</a>
+    <a href="gallery.html">Gallery</a>
+    <a href="location.html">location</a>
+</nav>
+        <h1>Contact Us | Janta Fitness Club</h1>
+        <p>We would love to hear from you!</p>
+    </header>
+
+    <div class="contact-container">
+        <!-- Contact Form -->
+        <div class="contact-form">
+            <h2>Get in Touch</h2>
+            <form action="submit_contact_form.php" method="POST">
+                <label for="name">Full Name</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="email">Email Address</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="phone">Phone Number</label>
+                <input type="tel" id="phone" name="phone">
+
+                <label for="message">Message</label>
+                <textarea id="message" name="message" required></textarea>
+
+                <button type="submit">Send Message</button>
+            </form>
+        </div>
+
+        <!-- Contact Information -->
+        <div class="contact-info">
+            <h2>Contact Information</h2>
+            <p><strong>Address:</strong>    H4QF+29R, Canal Rd, near Sd school, Chhoturam Colony, Narwana, Haryana 126116
+
+</p>
+            <p><strong>Phone:</strong> 95417-41575</p>
+            <p> <strong>phone:</strong> 9516688099 </p>
+            <p><strong>Email:</strong> jantafitnessclub@gmail.com</p>
+            <p><strong>Follow us:</strong> Facebook | Instagram | Twitter</p>
+        </div>
+    </div>
+    <div>
+
+         <h3>My Embedded Google Map</h3>
+    <iframe
+        width="600"
+        height="450"
+        style="border:0"
+        loading="lazy"
+        allowfullscreen
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3469.5524539952794!2d76.12082687553628!3d29.58762247515688!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3911f3bdd347d6eb%3A0x701ea3e8d543900c!2sJanta%20fitness%20club!5e0!3m2!1sen!2sin!4v1742455484514!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </iframe>
+
+    </div>
+
+    <footer>
+        <p>&copy; 2025 Janta Fitness Club. All Rights Reserved.</p>
+    </footer>
+
+</body>
+</html>

@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome to janta fitness club </title>
+    <link rel="stylesheet" href="styles.css"> <!-- External CSS -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet"> <!-- Google Fonts -->
+</head> <style>
+
+ font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: pink;
+
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            animation: scrollBackground 30s linear infinite;
+
+
+        header {
+            background-color: blue;
+            color: white;
+            padding: 10px 0;
+            text-align: center;
+        }
+
+        nav {
+            display: flex;
+            justify-content: center;
+            background-color: #444;
+        }
+
+        nav a {
+            color: white;
+            padding: 14px 20px;
+            text-decoration: none;
+            text-align: center;
+        }
+
+        nav a:hover {
+            background-color: #ddd;
+            color: black;
+        }
+
+        section {
+            padding: 40px;
+            margin: 20px;
+            background-color: darkgrey;
+            border-radius: 8px;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color:grey;
+            color: white;
+        }
+
+        .services, .contact-form, .events {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+        }
+
+        .service-item, .contact-form input, .contact-form textarea, .event-item {
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        .service-item, .event-item {
+            background-color: #f4f4f4;
+            text-align: center;
+            padding: 20px;
+        }
+
+        .contact-form input[type="submit"] {
+            background-color: #333;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+
+        .contact-form input[type="submit"]:hover {
+            background-color: white;
+        }
+
+        /* Add styles for images */
+       /* .about-image, .service-image {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+        }*/
+
+        /* Scrolling images styles */
+      /*  .container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+        }
+*/
+        .scrolling-images {
+            display: flex;
+            overflow: hidden;
+            width: 80%;
+            border-radius: 8px;
+        }
+
+        .image {
+            width: 100%;
+            height: 300px;
+            background-size: cover;
+            background-position: center;
+            flex-shrink: 0;
+            transition: transform 0.5s ease-in-out;
+        }
+
+        .arrow {
+            background-color: rgba(0, 0, 0, 0.5);
+            color: white;
+            padding: 10px;
+            border: none;
+            cursor: pointer;
+            font-size: 24px;
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+
+        .arrow:hover {
+            background-color: rgba(0, 0, 0, 0.8);
+        }
+
+        .left {
+            left: 0;
+        }
+
+        .right {
+            right: 0;
+        }
+
+       /* @keyframes scrollBackground {
+            0% {
+                background-position: 0% 0%, 100% 100%, 0% 0%;
+            }
+            50% {
+                background-position: 100% 100%, 0% 0%, 100% 100%;
+            }
+            100% {
+                background-position: 0% 0%, 100% 100%, 0% 0%;
+            }
+        }
+    */
+</style>
+<body>
+
+
+    <!-- Header Section -->
+    <header><nav>
+
+<a href="index.html"> janta fitness club </a>
+    <a href="home.html"   >Home</a>
+    <a href="description.html">About</a>
+    <a href="services.html">Services</a>
+    <a href="contact.html">Contact Us</a>
+    <a href="gallery.html">Gallery</a>
+    <a href="location.html">location</a>
+
+
+</nav>
+    </nav>
+        <div class="container">
+            <h1>Janta fitness club </h1>
+            <nav>
+                 <ul>
+                    <li><a href="#home" class="nav-btn">Home</a></li>
+                    <li><a href="#about" class="nav-btn">About</a></li>
+                    <li><a href="#services" class="nav-btn">Services</a></li>
+                    <li><a href="#membership" class="nav-btn">Membership</a></li>
+                    <li><a href="#testimonials" class="nav-btn">Testimonials</a></li>
+                    <li><a href="#contact" class="nav-btn">Contact</a></li>
+                </ul>
+            
+            </nav>
+
+
+
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h2>Your Fitness Journey Starts Here</h2>
+            <p>Join janta fitness Gym and achieve your fitness goals with state-of-the-art equipment and expert trainers.</p>
+            <button><a href="#membership">Become a Member</a></button>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about">
+        <div class="container">
+            <h2>About Us</h2>
+            <p>janta fitness club is a premier fitness center dedicated to helping you achieve your health and fitness goals. Whether you’re looking to lose weight, build muscle, or improve overall fitness, we have everything you need to succeed.</p>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services">
+        <div class="container">
+            <h2>Our Services</h2>
+            <div class="services-list">
+                <div class="service">
+                    <h3>Personal Training</h3>
+                    <p>Work with certified personal trainers to create a workout plan that meets your specific needs.</p>
+                </div>
+                <div class="service">
+                    <h3>Group Classes</h3>
+                    <p>Join fun and motivating group fitness classes such as Yoga, Zumba, and HIIT.</p>
+                </div>
+                <div class="service">
+                    <h3>Nutrition Counseling</h3>
+                    <p>Get expert advice on nutrition to complement your workouts and achieve optimal results.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Membership Section -->
+    <section id="membership">
+        <div class="container">
+            <h2>Our Membership Plans</h2>
+            <div class="membership-plans">
+                <div class="plan">
+                    <h3>Basic Plan</h3>
+                    <p></p>
+                    <ul>
+                        <li>Access to gym equipment</li>
+                        <li>1 free fitness assessment</li>
+                        <li>Open gym hours</li>
+                    </ul>
+                </div>
+                <div class="plan">
+                    <h3>Premium Plan</h3>
+                    <p></p>
+                    <ul>
+                        <li>All Basic Plan features</li>
+                        <li>Unlimited group classes</li>
+                        <li>1 personal training session per month</li>
+                    </ul>
+                </div>
+                <div class="plan">
+                    <h3>VIP Plan</h3>
+                    <p></p>
+                    <ul>
+                        <li>All Premium Plan features</li>
+                        <li>Unlimited personal training sessions</li>
+                        <li>Priority booking for classes</li>
+                    </ul>
+                </div>
+            </div>
+            <button><a href="#contact">Contact Us</a></button>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="testimonials">
+        <div class="container">
+            <h2>What Our Members Say</h2>
+            <div class="testimonial">
+                <p>"janta fitness club  has transformed my life! The trainers are so supportive, and the atmosphere is motivating. Highly recommend!"</p>
+                <p><strong>– .</strong></p>
+            </div>
+            <div class="testimonial">
+                <p>"I’ve never felt better! The group classes are so much fun, and I’m seeing amazing results."</p>
+                <p><strong>– .</strong></p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact">
+        <div class="container">
+            <h2>Contact Us</h2>
+            <form>
+                <label for="name">Name</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="message">Message</label>
+                <textarea id="message" name="message" required></textarea>
+
+                <button type="submit">Send Message</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+
+        <div class="container">
+            <p>&copy; 2025 janta fitness club. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+</body>
+</html>

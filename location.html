@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Embedded Google Map</title>
+</head>
+<style>
+
+ font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: grey;
+
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            animation: scrollBackground 30s linear infinite;
+
+
+        header {
+            background-color: black;
+            color: white;
+            padding: 10px 0;
+            text-align: center;
+        }
+
+        nav {
+            display: flex;
+            justify-content: center;
+            background-color: #444;
+        }
+
+        nav a {
+            color: white;
+            padding: 14px 20px;
+            text-decoration: none;
+            text-align: center;
+        }
+
+        nav a:hover {
+            background-color: #ddd;
+            color: black;
+        }
+
+        section {
+            padding: 40px;
+            margin: 20px;
+            background-color: grey;
+            border-radius: 8px;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: grey;
+            color: grey;
+        }
+
+        .services, .contact-form, .events {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+        }
+
+        .service-item, .contact-form input, .contact-form textarea, .event-item {
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        .service-item, .event-item {
+            background-color: #f4f4f4;
+            text-align: center;
+            padding: 20px;
+        }
+
+        .contact-form input[type="submit"] {
+            background-color: #333;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+
+        .contact-form input[type="submit"]:hover {
+            background-color: #555;
+        }
+
+
+        .scrolling-images {
+            display: flex;
+            overflow: hidden;
+            width: 80%;
+            border-radius: 8px;
+        }
+
+        .image {
+            width: 100%;
+            height: 300px;
+            background-size: cover;
+            background-position: center;
+            flex-shrink: 0;
+            transition: transform 0.5s ease-in-out;
+        }
+
+        .arrow {
+            background-color: rgba(0, 0, 0, 0.5);
+            color: white;
+            padding: 10px;
+            border: none;
+            cursor: pointer;
+            font-size: 24px;
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+
+        .arrow:hover {
+            background-color: rgba(0, 0, 0, 0.8);
+        }
+
+        .left {
+            left: 0;
+        }
+
+        .right {
+            right: 0;
+        }
+
+
+</style>
+<body>
+
+
+<header>
+    <nav>
+
+<a href="index.html"> janta fitness club </a>
+    <a href="home.html">Home</a>
+    <a href="description.html">About</a>
+    <a href="services.html">Services</a>
+    <a href="contact.html">Contact Us</a>
+    <a href="gallery.html">Gallery</a>
+    <a href="location.html">location</a>
+</nav>
+</header>
+    <h3>My Embedded Google Map</h3>
+    <iframe
+        width="600"
+        height="450"
+        style="border:0"
+        loading="lazy"
+        allowfullscreen
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3469.5524539952794!2d76.12082687553628!3d29.58762247515688!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3911f3bdd347d6eb%3A0x701ea3e8d543900c!2sJanta%20fitness%20club!5e0!3m2!1sen!2sin!4v1742455484514!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </iframe>
+</body>
+</html>
